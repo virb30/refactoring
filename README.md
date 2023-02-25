@@ -19,7 +19,14 @@ OBS: o código está feio mas funciona
 # Fase 2
 
 ## Objetivo
-Implementar uma classe que consuma um documento (CPF e/ou CNPJ - o cliente do consumidor será responsável por enviar a informação) 
-e retorne sua versão formatada. Não é necessário implementar a lógica de validação de CNPJ nesse momento.
+- Implementar uma classe (Bank) para consumir um documento (CPF e/ou CNPJ).
+- O cliente dessa classe será o responsável por enviar o documento
+- A classe Bank deverá ter um método `calculateFinalPrice(price)` onde:
+  - para CPF deverá retornar o próprio valor e;
+  - para CNPJ o valor acrescido de 20% 
+- A classe Bank deverá retornar o valor total
+
 
 OBS: é possível implementar todos os princípios do SOLID.
+OBS2: Tente não utilizar comparações para o tipo concreto de modo a garantir o `O` do SOLID
+Dica: implementar uma interface `Taxable`
